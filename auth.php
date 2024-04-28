@@ -45,7 +45,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     
     if (mysqli_query($conn, $insert_query)) {
         session_start();
-        $_SESSION['email'] = $email;
+        $_SESSION['user'] = $username;
         echo "success";
         header("location: dash.php");
     } else {

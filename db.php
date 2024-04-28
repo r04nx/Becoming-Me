@@ -2,12 +2,12 @@
 
 // Database credentials
 $servername = "127.0.0.1";
-$username = "pma";
-$password = "pma"; // Change this to your actual MySQL password
+$usern = "pma";
+$pass = "pma"; // Change this to your actual MySQL password
 $database = "beme"; // Change this to your actual database name
 
 // Create connection
-$conn = new mysqli($servername, $username, $password, $database);
+$conn = new mysqli($servername, $usern, $pass, $database);
 
 // Check connection
 if ($conn->connect_error) {

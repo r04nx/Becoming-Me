@@ -2,41 +2,31 @@
 include "header.php";
 session_start();
 
-// Check if the form is submitted
 if(isset($_POST['login'])) {
-    // Check if email and password are provided
     if(isset($_POST['email']) && isset($_POST['password'])) {
-        // Get the email and password from the form
         $email = $_POST['email'];
         $password = $_POST['password'];
 
-        // Include database connection
         include('db.php');
 
-        // Prepare the SQL statement using prepared statements
-        $sql = 'SELECT id, username FROM user WHERE email=? AND password=?';
-        $stmt = $conn->prepare($sql);
-        $stmt->bind_param('ss', $email, $password);
-        $stmt->execute();
-        $result = $stmt->get_result();
+        $sql = "SELECT id, username FROM user WHERE email='$email' AND password='$password'";
+        echo $sql;
+        $result = mysqli_query($conn, $sql);
 
-        // Check if a row is returned
-        if ($row = $result->fetch_assoc()) {
-            // Start the session
+        if (mysqli_num_rows($result) == 1) {
+            $row = mysqli_fetch_assoc($result);
             $_SESSION['user'] = $row['username'];
-            // Redirect to dashboard
             header("Location: dash.php");
-            exit(); // Terminate the script after redirection
+            exit();
         } else {
-            // Invalid credentials
             echo '<script>alert("Invalid Username and Password")</script>';
         }
     } else {
-        // Form fields are not set
         echo '<script>alert("Email and password are required")</script>';
     }
 }
 ?>
+
 
 <?php include "header.php"; ?>
 <div class="min-h-screen bg-gray-100 text-gray-900 flex justify-center">
@@ -74,7 +64,7 @@ if(isset($_POST['login'])) {
                     <div class="mx-auto max-w-xs">
                         <form action="" method="post">
                             <input name='email' class="transition-all duration-300 ease-in-out w-full px-8 py-4 rounded-lg font-medium bg-gray-100 border border-gray-200 placeholder-gray-500 text-sm focus:outline-none focus:border-gray-400 focus:bg-white"
-                                type="email" placeholder="Email" />
+                                type="email" placeholder="Email" required/>
                             <!-- Password Input Field -->
                             <input name='password' class="transition-all duration-300 ease-in-out w-full px-8 py-4 rounded-lg font-medium bg-gray-100 border border-gray-200 placeholder-gray-500 text-sm focus:outline-none focus:border-gray-400 focus:bg-white mt-5"
                                 type="password" placeholder="Password" />

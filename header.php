@@ -104,10 +104,10 @@ $current_url = $_SERVER['REQUEST_URI'];
 
 // Check if "reg" is present in the URL
 if (strpos($current_url, 'reg') === false &&  strpos($current_url, 'login') === false) {
-  echo '
+ echo '
 <div class="fixed z-50 w-full h-16 max-w-lg -translate-x-1/2 bg-white border border-gray-200 rounded-full bottom-2 left-1/2 dark:bg-gray-700 dark:border-gray-600">
     <div class="grid h-full max-w-lg grid-cols-5 mx-auto">
-        <button data-tooltip-target="tooltip-home" type="button" class="inline-flex flex-col items-center justify-center px-5 rounded-s-full hover:bg-gray-50 dark:hover:bg-gray-800 group">
+        <button data-tooltip-target="tooltip-home" onclick="window.location.href = '.'https://example.com'.'" type="button" class="inline-flex flex-col items-center justify-center px-5 rounded-s-full hover:bg-gray-50 dark:hover:bg-gray-800 group">
             <svg class="w-5 h-5 mb-1 text-gray-500 dark:text-gray-400 group-hover:text-blue-600 dark:group-hover:text-blue-500" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
                 <path d="m19.707 9.293-2-2-7-7a1 1 0 0 0-1.414 0l-7 7-2 2a1 1 0 0 0 1.414 1.414L2 10.414V18a2 2 0 0 0 2 2h3a1 1 0 0 0 1-1v-4a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v4a1 1 0 0 0 1 1h3a2 2 0 0 0 2-2v-7.586l.293.293a1 1 0 0 0 1.414-1.414Z"/>
             </svg>
@@ -162,8 +162,8 @@ if (strpos($current_url, 'reg') === false &&  strpos($current_url, 'login') === 
 
     <nav class="bg-white border-purple-200 dark:bg-purple-700">
         <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-1">
-            <a href="#" class="flex">
-                <img src="img/icon-png.png" class="h-12" alt="Flowbite Logo" />
+            <a href="" class="flex">
+                <img src="img/icon-png.png" class="h-12" alt="BecomingMe" />
                 <span class="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">Becoming Me</span>
             </a>
           
