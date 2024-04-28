@@ -2,7 +2,7 @@
 
 <?php
 session_start();
-if (!isset($_SESSION['username'])) {
+if (!isset($_SESSION['user'])) {
     // Redirect the user to the registration page
     header("Location: register.php");
     exit();

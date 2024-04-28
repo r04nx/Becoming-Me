@@ -93,7 +93,7 @@ include "header.php";
                 Tutorial
             </a>
             <h1 class="text-gray-900 text-xl md:text-3xl font-extrabold mb-2">Daily Coaching</h1>
-            <button class="bg-pink-700 text-white text-base font-medium py-2 px-4 rounded-lg">Play</button>
+            <button onclick = "window.location.href='coach.php' "class="bg-pink-700 text-white text-base font-medium py-2 px-4 rounded-lg">Play</button>
         </div>
         <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
             <div class="bg-yellow-200 border border-yellow-400 rounded-lg p-3 md:p-4 flex items-center">

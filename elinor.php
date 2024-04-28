@@ -1,3 +1,6 @@
+
+<script src="https://cdn.botpress.cloud/webchat/v1/inject.js"></script>
+<script src="https://mediafiles.botpress.cloud/6c06633a-c738-4048-a3a6-66b383beac91/webchat/config.js" defer></script>
 <?php
 session_start();
 if (!isset($_SESSION['user'])) {
@@ -5,7 +8,6 @@ if (!isset($_SESSION['user'])) {
     header("Location: register.php");
     exit();
 }
-include "header.php";
 ?>
 <style>
     body {
@@ -29,11 +31,7 @@ include "header.php";
   <div class="overlay"></div>
   <section class="container mx-auto px-4 py-8">
     <div class="grid grid-cols-2 gap-4 md:grid-cols-4">
-      <button class="bg-opacity-50 bg-gray-200 bg-opacity-50 backdrop-filter backdrop-blur-lg border border rounded-lg text-white text-xl font-semibold py-4 px-6 md:px-8">Add</button>
-      <button class="bg-opacity-50 bg-gray-200 bg-opacity-50 backdrop-filter backdrop-blur-lg border border-gray-300 rounded-lg text-white text-xl font-semibold py-4 px-6 md:px-8">Goals</button>
-      <button class="bg-opacity-50 bg-gray-200 bg-opacity-50 backdrop-filter backdrop-blur-lg border border-gray-300 rounded-lg text-white text-xl font-semibold py-4 px-6 md:px-8">Daily Tasks</button>
-      <button class="bg-opacity-50 bg-gray-200 bg-opacity-50 backdrop-filter backdrop-blur-lg border border-gray-300 rounded-lg text-white text-xl font-semibold py-4 px-6 md:px-8">Letter to Your Future Self</button>
-    </div>
+   </div>
   </section>
 
   <div class="absolute bottom-12 left-0 right-0 flex justify-center">
