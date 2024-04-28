@@ -32,13 +32,23 @@ include "header.php";
     <!-- Feed layout -->
     <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
       <!-- Cards -->
-      <div class="glass-effect p-4">
-        <h2 class="text-lg font-semibold mb-2">Card 1</h2>
+      <div class="glass-effect p-0">
+      <div class="overflow-hidden bg-white rounded shadow-md text-slate-500 shadow-slate-200">
+  <!-- Image -->
+  <figure class="relative">
+    <img src="https://picsum.photos/id/100/800/600" alt="card image" class="aspect-video w-full" />
+    <figcaption class="absolute bottom-0 left-0 w-full p-3 text-white bg-gradient-to-t from-slate-900">
+      <?php include("quote.php") ?>
+      <h3 class='text-semibold'><? $quote ?></h3>
+      <p> <? $author ?></p>
+    </figcaption>
+  </figure>
+</div>
     </div>
-    <div class="glass-effect p-4">
+    <!-- <div class="glass-effect p-4">
         <h2 class="text-lg font-semibold mb-2">Card 2</h2>
         <p>This is another card with some content.</p>
-    </div>
+    </div> -->
     
     <div class="glass-effect px-4">
         <p class="text-md font-semibold pt-2 pb-1">Routines</p>
@@ -76,7 +86,7 @@ include "header.php";
       <section class="bg-white rounded-lg overflow-hidden shadow-lg glass-effect">
     <div class="py-6 px-4 md:px-8 mx-auto max-w-screen-xl lg:py-10 lg:px-12">
         <div class="bg-pink-200 border border-pink-400 rounded-lg p-3 md:p-4 mb-6">
-            <a href="#" class="bg-pink-300 text-pink-800 text-xs font-medium inline-flex items-center px-2.5 py-1 rounded-md mb-2">
+            <a href="" class="bg-pink-300 text-pink-800 text-xs font-medium inline-flex items-center px-2.5 py-1 rounded-md mb-2">
                 <svg class="w-3 h-3 me-1.5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 14">
                     <path d="M11 0H2a2 2 0 0 0-2 2v10a2 2 0 0 0 2 2h9a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2Zm8.585 1.189a.994.994 0 0 0-.9-.138l-2.965.983a1 1 0 0 0-.685.949v8a1 1 0 0 0 .675.946l2.965 1.02a1.013 1.013 0 0 0 1.032-.242A1 1 0 0 0 20 12V2a1 1 0 0 0-.415-.811Z"/>
                 </svg>
